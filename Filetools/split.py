@@ -21,7 +21,6 @@ def split(fromfile, todir, chunksize=chunksize):
         chunk = input.read(chunksize)       # get next part <= chunksize
         if not chunk: break
         partnum += 1
-        #filename = os.path.join(todir, ('part%04d' % partnum))
         filename = os.path.join(todir, 'part{:04d}'.format(partnum))
         fileobj = open(filename, 'wb')
         fileobj.write(chunk)
