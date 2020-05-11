@@ -8,9 +8,9 @@ def showformat(recs, sept=('-' * 40)):
     print(sept)
     for rec in recs:
         maxkey = max(len(key) for key in rec) # max key len
-    for key in rec: # or: \t align  
-        print('%-*s => %s' % (maxkey, key, rec[key])) # -ljust, *len
-    print(sept)
+        for key in rec: # or: \t align  
+            print('%-*s => %s' % (maxkey, key, rec[key])) # -ljust, *len
+        print(sept)
 
 def dumpdb(cursor, table, format=True):
     if not format:
